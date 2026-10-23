@@ -1,0 +1,77 @@
+table test_sales
+	lineageTag: 9f67557b-0a5a-402d-b1a3-287b3f866494
+	sourceLineageTag: [dbo].[test_sales]
+
+	measure 'Total Sales' = SUM(test_sales[Amount])
+		lineageTag: 4bbe5993-c167-49d4-a52b-b9e3ba6f0eee
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 742a11f8-6866-4c25-93e6-2690ff2d0d40
+		sourceLineageTag: OrderID
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c662338-0618-4839-8355-5a01451a3fef
+		sourceLineageTag: OrderDate
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: e76dedae-bdc9-4267-8116-7e854527586c
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: d2c2d2bd-0b35-4009-b876-d10dc1024db7
+		sourceLineageTag: Product
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: cc8a8fad-ce88-4330-bf7c-8124e492ae27
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 791075e0-4763-42ec-a326-293702a96790
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition test_sales = entity
+		mode: directLake
+		source
+			entityName: test_sales
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_model'
+
