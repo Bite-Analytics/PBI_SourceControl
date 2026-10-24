@@ -2,7 +2,7 @@ table test_sales
 	lineageTag: 9f67557b-0a5a-402d-b1a3-287b3f866494
 	sourceLineageTag: [dbo].[test_sales]
 
-	measure 'Total Sales' = SUM(test_sales[Amount])
+	measure 'Total Sales' = SUM(test_sales[Amount]) -- desc
 		lineageTag: 4bbe5993-c167-49d4-a52b-b9e3ba6f0eee
 
 		changedProperty = Name

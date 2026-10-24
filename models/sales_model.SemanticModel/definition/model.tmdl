@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["DirectLake - lh_model"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["RemoteModeling","DirectLakeOnOneLakeCreatedInDesktop","TMDLView_Desktop"]
+annotation PBI_ProTooling = ["RemoteModeling","DirectLakeOnOneLakeCreatedInDesktop","TMDLView_Desktop","DirectLakeOnOneLakeInWeb","WebModelingEdit"]
 
 ref table test_sales
 
