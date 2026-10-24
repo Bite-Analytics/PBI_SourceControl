@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "2a80f0042323498b4be6",
+  "position": {
+    "x": 282.84644194756555,
+    "y": 239.70037453183522,
+    "z": 0,
+    "height": 300,
+    "width": 300
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "test_sales"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "test_sales.Total Sales",
+              "nativeQueryRef": "Total Sales"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "335bad23f82504fce235",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "test_sales"
+              }
+            },
+            "Property": "Total Sales"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
