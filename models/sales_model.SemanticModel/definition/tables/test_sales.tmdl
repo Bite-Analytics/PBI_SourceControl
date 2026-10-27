@@ -9,7 +9,7 @@ table test_sales
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Qty' = SUM(test_sales[Quantity])
+	measure 'Total Qty' = SUM(test_sales[Quantity]) -- test
 		formatString: 0
 		lineageTag: 6a3df1fd-4667-418c-9fdc-8011c1ce8de0
 
